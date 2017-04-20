@@ -20,7 +20,7 @@
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-            opacity: .5 ;
+            opacity: 0.51 ;
             z-index: 1;
             /*display:table;*/
             width:100%;
@@ -31,6 +31,12 @@
             bottom: 0;
         }
         
+		.text-center2{ 
+			line-height: 850px;
+			text-align: center; 
+			font-weight:Bold;
+
+		}
     </style>
 
 </head>
@@ -111,7 +117,7 @@
 
             <div class="carousel-item active">
 
-                <img class="d-block img-fluid" src="http://www.keytours.gr/uploads/images/greece_athens_cape_sounio_sunset.jpg" width="100%" alt="First slide">
+                <img class="d-block img-fluid" src="http://www.keytours.gr/uploads/images/greece_athens_cape_sounio_sunset.jpg" background-size= "cover" width="100%" alt="First slide">
 
                 <div class="carousel-caption d-none d-md-block">
 
@@ -119,8 +125,8 @@
 
                         <div class="col-8" style="font-family: Calibri;">
 
-                            <h2 class="text-center">
-                                Bla bla bla bla Bla bla bla bla Bla bla bla bla Bla bla bla bla Bla bla bla bla Bla bla bla bla Bla bla bla bla
+                            <h2 class="text-center2">
+                                hello!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                             </h2>
 
                         </div>
@@ -199,8 +205,83 @@
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
+		
+	
+		
+			<div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Sign Up</div>
+                            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+                        </div>  
+                        <div class="panel-body" >
+                            <form id="signupform" class="form-horizontal" role="form">
+                                    
+                                
+                                  
+                                <div class="form-group">
+                                    <label for="email" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="email" placeholder="Email Address">
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="fulltname" class="col-md-3 control-label">Full Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="fullname" placeholder="Full Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="passwd" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password2" class="col-md-3 control-label">Repeat Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password2" class="form-control" name="passwd2" placeholder="Repeat Password">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                  <label class="col-md-3 control-label">Choose Country</label>
+                                  <div class="col-md-9">
+                                      <select id="disabledSelect" class="form-control">
+                                        <option>Germany</option>
+                                        <option>Greece</option>
+                                        <option>Italy</option>
+                                      </select>
+                                  </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-sm-offset-3 col-sm-9">
+                                        <div class="checkbox" data-pg-collapsed> 
+                                            <label class="control-label"> 
+                                                <input type="checkbox" value=""> I accept the <a href="#">Terms and Conditions of Service</a>        
+                                            </label>                                         
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <!-- Button -->                                        
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i>   Sign Up</button>
+                                    </div>
+                                </div>
+                                
+                            </form>
+                         </div>
+                    </div>
 
-     
+               
+               
+                
+         </div> 
+      <!-- Signup box - END -->
 
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
                 integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
