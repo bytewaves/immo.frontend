@@ -4,38 +4,35 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
+    <!-- Load Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
 
     <style type="text/css">
 
-        .carousel-caption {
-            position: absolute;
-            background-color: #080d15;
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            opacity: .5 ;
-            z-index: 1;
-            /*display:table;*/
-            width:100%;
-            height:100%;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
-        
-		.text-center2{ 
-			line-height: 850px;
-			text-align: center;
+        /*.slide-1-overlay
+        {
+            /*font-family: 'Source Sans Pro', sans-serif;*/
+            /*font-family: 'Open Sans', sans-serif;
+        }*/
 
-		}
+        .container .container-overlay
+        {
+            position: absolute;
+            width: 40%;
+            left: 55%;
+            top: 40%;
+            text-align: left;
+            background:rgba(0, 0, 0, 0.4);
+            color: rgba(255, 255, 255, 1);
+        }
+
     </style>
 
 </head>
@@ -116,22 +113,15 @@
 
             <div class="carousel-item active">
 
-                <img class="d-block img-fluid" src="http://www.keytours.gr/uploads/images/greece_athens_cape_sounio_sunset.jpg" width="100%" alt="First slide">
+                <img class="d-block img-fluid" src="http://www.keytours.gr/uploads/images/greece_athens_cape_sounio_sunset.jpg"  width="100%" alt="First slide">
 
-                <div class="carousel-caption d-none d-md-block">
-
-                    <div class="row justify-content-center py-5">
-
-                        <div class="col-8" style="font-family: Calibri;">
-
-                            <h2 class="text-center2">
-                                hello!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                            </h2>
-
+                <div class="container-overlay">
+                    <div class="row">
+                        <div class="col-md-12 mx-2">
+                            <h1 style="font-family: 'Source Sans Pro', sans-serif; font-size: 50px">Fluid jumbotron</h1>
+                            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
                         </div>
-
                     </div>
-
                 </div>
 
             </div>
@@ -147,7 +137,7 @@
 
           </div>
           <!-- CAROUSEL-INNER - END -->
-
+<!-- 
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -156,7 +146,7 @@
           <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-          </a>
+          </a> -->
 
         </div>
         <!-- EXAMPLE INDICATORS - END -->
@@ -204,8 +194,83 @@
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
+        
+    
+        
+            <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Sign Up</div>
+                            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+                        </div>  
+                        <div class="panel-body" >
+                            <form id="signupform" class="form-horizontal" role="form">
+                                    
+                                
+                                  
+                                <div class="form-group">
+                                    <label for="email" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="email" placeholder="Email Address">
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="fulltname" class="col-md-3 control-label">Full Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="fullname" placeholder="Full Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="passwd" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password2" class="col-md-3 control-label">Repeat Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password2" class="form-control" name="passwd2" placeholder="Repeat Password">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                  <label class="col-md-3 control-label">Choose Country</label>
+                                  <div class="col-md-9">
+                                      <select id="disabledSelect" class="form-control">
+                                        <option>Germany</option>
+                                        <option>Greece</option>
+                                        <option>Italy</option>
+                                      </select>
+                                  </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-sm-offset-3 col-sm-9">
+                                        <div class="checkbox" data-pg-collapsed> 
+                                            <label class="control-label"> 
+                                                <input type="checkbox" value=""> I accept the <a href="#">Terms and Conditions of Service</a>        
+                                            </label>                                         
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <!-- Button -->                                        
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i>   Sign Up</button>
+                                    </div>
+                                </div>
+                                
+                            </form>
+                         </div>
+                    </div>
 
-     
+               
+               
+                
+         </div> 
+      <!-- Signup box - END -->
 
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
                 integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
