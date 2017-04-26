@@ -1,34 +1,125 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+
 
     <!-- Load Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Rotating Image Banner with Fade Effect</title>
-<style type="text/css">
-<!--
-#wrap {
-	height: 375px;
-	width: 976px;
-	margin: 0 auto;
-	overflow: hidden;
-	padding:5px;
-}
-#wrap img { display:none; }
-#wrap .is-showing { display: inline; }
--->
-</style>
-</head>
 
-<body>	
- <div class="container" style="background-color: darkorange">
+    <style type="text/css">
+	
+	
+	.container .container-overlay
+        {
+            position: absolute;
+            width: 45%;
+            left: 55%;
+            top: 250px;
+            text-align: left;
+            background:rgba(0, 0, 0, 0.4);
+            color: rgba(255, 255, 255, 1);
+			
+			background-size: cover;
+        }
+
+   // Carousel fade transition
+.carousel-fade {
+	.carousel-item {
+		display: block;
+		position: absolute;
+		opacity: 0;
+		transition: opacity .75s ease-in-out;
+
+		&.active {
+			opacity: 1;
+		}
+	}
+}
+
+
+ // Custom styles for this pen
+html, 
+body, 
+.carousel,
+.carousel-inner,
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-item {
+  &:nth-child(1) {
+    content:url("http://www.keytours.gr/uploads/images/greece_athens_cape_sounio_sunset.jpg");  
+	
+  }
+  &:nth-child(2) {
+    content:url("http://www.keytours.gr/uploads/images/greece_athens_cape_sounio_sunset.jpg");  
+  }
+  &:nth-child(3) {
+    content:url("http://www.keytours.gr/uploads/images/greece_athens_cape_sounio_sunset.jpg");  
+  }
+}
+
+.carousel-fade .carousel-item {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  transition: opacity .75s ease-in-out;
+}
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-item {
+  width: 100%;
+  height: 550px;
+}
+
+.carousel {
+  position: absolute;
+  top: 55px;
+ 
+}
+
+.carousel-item:nth-child(1) {
+  content:url("http://www.keytours.gr/uploads/images/greece_athens_cape_sounio_sunset.jpg");
+}
+.carousel-item:nth-child(2) {
+  content:url("http://www.keytours.gr/uploads/images/greece_athens_cape_sounio_sunset.jpg");
+}
+.carousel-item:nth-child(3) {
+  content:url("http://www.keytours.gr/uploads/images/greece_athens_cape_sounio_sunset.jpg");
+}
+
+
+    </style>
+
+</head>
+<!-- HEAD - END -->
+
+
+<body>
+<div class="container" style="background-color: darkorange">
 
         <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
 
@@ -85,94 +176,74 @@
                 </ul>
             </div>
         </nav>
-        <!-- NAVBAR - END -->
 		
-    <div id="wrap">
-        <img src="http://www.keytours.gr/uploads/images/greece_athens_cape_sounio_sunset.jpg"" width="100%" height="375" alt="image 1" class="is-showing" />
-    	<img src="http://www.keytours.gr/uploads/images/greece_athens_cape_sounio_sunset.jpg"" width="960" height="375" alt="image 2"  />
-        <img src="http://www.keytours.gr/uploads/images/greece_athens_cape_sounio_sunset.jpg"" width="960" height="375" alt="image 3"  />
-        <img src="http://www.keytours.gr/uploads/images/greece_athens_cape_sounio_sunset.jpg"" width="960" height="375" alt="image 4"  />
-        <img src="http://www.keytours.gr/uploads/images/greece_athens_cape_sounio_sunset.jpg"" width="960" height="375" alt="image 5"  />
+
+<!-- NAVBAR - END -->
+
+
+
+<div data-ride="carousel" class="carousel carousel-fade" id="carousel-example-captions">
+    <ol class="carousel-indicators">
+      <li class="active" data-slide-to="0" data-target="#carousel-example-captions"></li>
+      <li data-slide-to="1" data-target="#carousel-example-captions" class=""></li>
+      <li data-slide-to="2" data-target="#carousel-example-captions" class=""></li>
+    </ol>
+    <div role="listbox" class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="carousel-caption">
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-caption">
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-caption">
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </div>
     </div>
-    
-    <h1 style="text-align:center;">edw na mpei kati san jumpotron????</h1>
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-  slideShow();
-});
-
-function slideShow() {
+    <a rel="nofollow" rel="noreferrer"data-slide="prev" role="button" href="#carousel-example-captions" class="left carousel-control">
+      <span aria-hidden="true" class="icon-prev"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a rel="nofollow" rel="noreferrer"data-slide="next" role="button" href="#carousel-example-captions" class="right carousel-control">
+      <span aria-hidden="true" class="icon-next"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
   
-  var showing = $('#wrap .is-showing');
-  var next = showing.next().length ? showing.next() : showing.parent().children(':first');
-  /*
-  * We could have written the above statement the long way to achieve the same results
-  *
-  * if(showing.next().length) {
-  *		showing.next();
-  *	} else {
-  *		showing.parent().children(':first');
-  * }
-  */  
-  showing.fadeOut(800, function() { next.fadeIn(800).addClass('is-showing'); }).removeClass('is-showing');
-  
-  setTimeout(slideShow, 5000);
-}
-
-</script>
- <div class="row justify-content-center">
-            <div class="col-8" style="background-color: aquamarine; font-family: Calibri">
-                <h2 class="text-center py-5">
-                    Bla bla bla bla Bla bla bla bla Bla bla bla bla Bla bla bla bla Bla bla bla bla Bla bla bla bla Bla bla bla bla
-                </h2>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <img class="img-fluid" src="Pics/street_market.jpg" alt="Responsive image">
-            </div>
-        </div>
-
-
-        <div class="row justify-content-center">
-            <div class="col-8" style="background-color: aquamarine; font-family: Calibri">
-                <h2 class="text-center py-5">
-                    Bla bla bla bla Bla bla bla bla Bla bla bla bla Bla bla bla bla Bla bla bla bla Bla bla bla bla Bla bla bla bla
-                </h2>
-            </div>
-        </div>
-
-
-
-        <div class="card card-inverse">
-          <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/9/91/View_of_the_Acropolis_Athens_%28pixinn.net%29.jpg"  alt="Card image">
-          <div class="card-img-overlay">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-
-
-        <div class="card card-inverse" style="background-color: #333; border-color: #333;">
-          <div class="card-block">
-            <h3 class="card-title">Special title treatment</h3>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-		
+  <div class="container-overlay">
+                    <div class="row">
+                        <div class="col-md-12 mx-2 hidden-sm-down">
+                            <h1 style="font-family: 'Source Sans Pro', sans-serif; font-size: 50px">Fluid jumbotron</h1>
+                            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                        </div>
+                    </div>
+                </div>
+				
+	
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+                integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+                crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+                integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+                crossorigin="anonymous">
+        </script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
                 integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
                 crossorigin="anonymous">
         </script>
-
-    </div>
-<!-- CONTAINER - END -->
+	</div>
+    <!-- CONTAINER - END -->
 
 </body>
 <!-- BODY - END -->
+
 </html>
