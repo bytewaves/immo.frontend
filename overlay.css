@@ -1,0 +1,22 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2e6d5;
+  opacity: 1;
+   
+  -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, 
+      color-stop(0.00,  rgba(242, 230, 213, 1)),
+      color-stop(0.40,  rgba(242, 230, 213, 0.9)),
+      color-stop(0.70,  rgba(0, 0, 0, 0)));
+}
+
+#logo
+{ 
+  position:absolute;
+  width: 25%;
+  top:7%;
+  left: 5%;
+}

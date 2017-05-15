@@ -3,35 +3,16 @@
 
 <head>
 
-  <style type="text/css">
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #f2e6d5;
-      opacity: 1;
-       
-      -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, 
-          color-stop(0.00,  rgba(242, 230, 213, 1)),
-          color-stop(0.40,  rgba(242, 230, 213, 0.9)),
-          color-stop(0.70,  rgba(0, 0, 0, 0)));
-    }
-
-    #logo
-    { 
-      position:absolute;
-      width: 25%;
-      top:7%;
-      left: 5%;
-    }
-
-  </style>
+  <link rel="stylesheet" type="text/css" href="navbar.css">
+  <link rel="stylesheet" type="text/css" href="overlay.css">
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
@@ -41,6 +22,37 @@
 <body>
 
   <div class="container-fluid">
+
+    <header style="">
+      <nav class="navbar navbar-default tembus">
+        <div class="container">
+
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span> 
+            </button>
+
+            <!-- <a class="navbar-brand" href="#">
+            Onoma etairias h akoma kai logo
+            </a>-->
+
+          </div>
+
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#" class="hvrcenter">Home</a></li>
+              <li><a href="#" class="hvrcenter">About</a></li>
+              <li><a href="#" class="hvrcenter">TimeLine</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+
 
     <div class="row">
 
