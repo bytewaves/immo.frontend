@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+
+    <title>navbar </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <style type="text/css">
+    
+      .navbar-default{
+      	background-color: #e74c3c !important; 
+      }
+
+      .navbar-default .navbar-header > a {
+      	color: #ecf0f1 ; 
+      }
+
+      .navbar-default .navbar-nav > li > a{
+      	color:#ecf0f1 ;
+      }
+
+      .navbar-default .navbar-nav > .active > a,
+      .navbar-default .navbar-nav > .active > a:hover,
+      .navbar-default .navbar-nav > .active > a:focus {
+      	border-bottom: 2px solid #ecf0f1;
+      	background-color: transparent;
+      }
+
+      .tembus {
+      	background-color: transparent !important;
+      }
+
+      .hvrcenter {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px transparent;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hvrcenter:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        background: #ECF0F1;
+        height: 2px;
+        -webkit-transition-property: left, right;
+        transition-property: left, right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+      }
+
+      .hvrcenter:hover:before, .hvrcenter:focus:before, .hvrcenter:active:before {
+        left: 0;
+        right: 0;
+      }
+
+    </style>
+</head>
+
+
+<body>
+
+  <div style="height:900px;background-color:#C1BDBD">
+  	<header style="">
+  		<nav class="navbar navbar-default tembus">
+  		  <div class="container">
+
+  		    <div class="navbar-header">
+
+  		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+  		        <span class="icon-bar"></span>
+  		        <span class="icon-bar"></span>
+  		        <span class="icon-bar"></span> 
+  		      </button>
+
+  		      <a class="navbar-brand" href="#">
+            Onoma etairias h akoma kai logo
+            </a>
+
+  		    </div>
+
+  		    <div class="collapse navbar-collapse" id="myNavbar">
+  		      <ul class="nav navbar-nav navbar-right">
+  		        <li><a href="#" class="hvrcenter">Home</a></li>
+  		        <li><a href="#" class="hvrcenter">About</a></li>
+  		        <li><a href="#" class="hvrcenter">TimeLine</a></li>
+  		      </ul>
+  		    </div>
+
+    		</div>
+  		</nav>
+  	</header>
+  </div>
+          
+</body>
+
+</html>
