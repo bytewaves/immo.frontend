@@ -1,72 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html >
 <head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
 
-  <link rel="stylesheet" type="text/css" href="navbar.css">
-  <link rel="stylesheet" type="text/css" href="overlay.css">
+    <title>Form </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+      <style type="text/css">
+    
+.navbar-default{
+	background-color: #e74c3c !important; 
+}
+.navbar-default .navbar-header > a {
+	color: #ecf0f1 ; 
+}
+.navbar-default .navbar-nav > li > a{
+	color:#ecf0f1 ;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	border-bottom: 2px solid #ecf0f1;
+	background-color: transparent;
+}
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+.tembus{
+	background-color: transparent !important;
+}
+.hvrcenter {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hvrcenter:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #ECF0F1;
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvrcenter:hover:before, .hvrcenter:focus:before, .hvrcenter:active:before {
+  left: 0;
+  right: 0;
+}
+	body {
+  background: #000;
+}
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+.containers {
+  margin: 5px auto;
+  width: 1600px;
+  height: 780px;
+  overflow: hidden;
+  position: relative;
+   border:5px solid;
+  border-top-color:#C6C6C6;
+  border-left-color:#C6C6C6;
+  border-bottom-color:#C6C6C6;
+  border-right-color:#C6C6C6;
+}
+
+.photo {
+  position: absolute;
+  animation: round 16s infinite;
+  opacity: 0;
+}
+
+@keyframes round {
+  25% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+img:nth-child(1) {
+  animation-delay: 12s;
+}
+
+img:nth-child(2) {
+  animation-delay: 8s;
+}
+
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+
+img:nth-child(4) {
+  animation-delay: 0s;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2e6d5;
+  opacity: 1;
+   
+  -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, 
+      color-stop(0.00,  rgba(242, 230, 213, 1)),
+      color-stop(0.40,  rgba(242, 230, 213, 0.9)),
+      color-stop(0.70,  rgba(0, 0, 0, 0)));
+}
+#logo
+{ 
+  position:absolute;
+  width: 25%;
+  top:7%;
+  left: 10%;
+}
+
+    </style>
 
 </head>
 
-
 <body>
-
-  <div class="container-fluid">
-
-    <header style="">
-      <nav class="navbar navbar-default tembus">
-        <div class="container">
-
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span> 
-            </button>
-
-            <!-- <a class="navbar-brand" href="#">
-            Onoma etairias h akoma kai logo
-            </a>-->
-
-          </div>
-
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#" class="hvrcenter">Home</a></li>
-              <li><a href="#" class="hvrcenter">About</a></li>
-              <li><a href="#" class="hvrcenter">TimeLine</a></li>
-            </ul>
-          </div>
-
-        </div>
-      </nav>
-    </header>
-
-
-    <div class="row">
-
-        <img src="Pics/athens_03.jpg" class="img-fluid">
-
-        <div class="overlay"></div>
-
-        <img id="logo" src="Pics/39-1.png" class="img-fluid">
-
-    </div>
-
-  </div>
-        
+<div style="height:52px;background-color:#C1BDBD ">
+	<header style="">
+		<nav class="navbar navbar-default tembus">
+		  <div class="container">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span> 
+		      </button>
+		      <a class="navbar-brand" href="#">
           
-</body>
-   
+      </a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#" class="hvrcenter">Home</a></li>
+		        <li><a href="#" class="hvrcenter">About</a></li>
+		        <li><a href="#" class="hvrcenter">TimeLine</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+	</header>
+</div>
+<img id="logo" src="Pics/39-1.png" class="img-fluid">
+<div class="row">
+  <div class="containers">
+  <img class='photo'  src="Pics/athens_03.jpg" alt="" />
+  <img class='photo'  src="Pics/athens_03.jpg" alt="" />
+  <img class='photo'  src="Pics/athens_03.jpg" alt="" />
+  <img class='photo'  src="Pics/athens_03.jpg" alt="" />
+   <div class="overlay"></div>
+ 
+</div>
+</div>
   
+  
+</body>
+</html>
