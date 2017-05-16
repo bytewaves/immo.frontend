@@ -4,175 +4,167 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex">
 
-    <title>overlay </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>overlay </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
-      <style type="text/css">
+  <style type="text/css">
     
-.navbar-default{
-	background-color: white !important; 
-}
-/*.navbar-default .navbar-header > a {
-	color: #ecf0f1 ; 
-}*/
-.navbar-default .navbar-nav > li > a{
-	color: black ;
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-	/*border-bottom: 2px solid black;*/
-	/*background-color: transparent;*/
-}
+    /*.navbar-default .navbar-nav > li > a{
+    	color: black ;
+    }*/
+
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+      border-bottom: 2px solid black;
+      background-color: transparent;
+    }
+
+    /*.hvrcenter {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px transparent;
+      position: relative;
+      overflow: hidden;
+    }*/
+
+    .hvrcenter:before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      left: 50%;
+      right: 50%;
+      bottom: 0;
+      background: black;
+      height: 2px;
+      -webkit-transition-property: left, right;
+      transition-property: left, right;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+    }
+
+    .hvrcenter:hover:before, .hvrcenter:focus:before, .hvrcenter:active:before {
+      left: 0;
+      right: 0;
+    }
+
+    .photo {
+      position: absolute;
+      animation: round 16s infinite;
+      opacity: 0;
+    }
+
+    @keyframes round {
+      25% {
+        opacity: 1;
+      }
+      40% {
+        opacity: 0;
+      }
+    }
+    img:nth-child(1) {
+      animation-delay: 12s;
+    }
+
+    img:nth-child(2) {
+      animation-delay: 8s;
+    }
+
+    img:nth-child(3) {
+      animation-delay: 4s;
+    }
+
+    img:nth-child(4) {
+      animation-delay: 0s;
+    }
+
+    .overlay {
+      position: absolute;
+      /*top: 50px;*/
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f2e6d5;
+      opacity: 1;
+       
+      -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, 
+          color-stop(0.00,  rgba(242, 230, 213, 1)),
+          color-stop(0.30,  rgba(242, 230, 213, 0.9)),
+          color-stop(0.50,  rgba(0, 0, 0, 0)));
+    }
+
+    #logo
+    { 
+      position:absolute;
+      width: 20%;
+      top:12%;
+      left: 5%;
+    	z-index: 1;
+    }
+
+    #moto
+    {
+      position: absolute;
+      top:20%;
+      left: 5%;
+      z-index: 2;
+    }
 
 
-/*.tembus{
-	background-color: transparent !important;
-}*/
-.hvrcenter {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  position: relative;
-  overflow: hidden;
-}
-.hvrcenter:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  background: black;
-  height: 2px;
-  -webkit-transition-property: left, right;
-  transition-property: left, right;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-.hvrcenter:hover:before, .hvrcenter:focus:before, .hvrcenter:active:before {
-  left: 0;
-  right: 0;
-}
-	body {
-  /*background: #000;*/
-}
+    /*body { padding-bottom: 50px; }*/
 
-/*.containers {
-  margin: 5px auto;
-  width: 1600px;
-  height: 780px;
-  overflow: hidden;
-  position: relative;
-   border:5px solid;
-  border-top-color:#C6C6C6;
-  border-left-color:#C6C6C6;
-  border-bottom-color:#C6C6C6;
-  border-right-color:#C6C6C6;
-}*/
-
-.photo {
-  position: absolute;
-  animation: round 16s infinite;
-  opacity: 0;
-}
-
-@keyframes round {
-  25% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0;
-  }
-}
-img:nth-child(1) {
-  animation-delay: 12s;
-}
-
-img:nth-child(2) {
-  animation-delay: 8s;
-}
-
-img:nth-child(3) {
-  animation-delay: 4s;
-}
-
-img:nth-child(4) {
-  animation-delay: 0s;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f2e6d5;
-  opacity: 1;
-   
-  -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, 
-      color-stop(0.00,  rgba(242, 230, 213, 1)),
-      color-stop(0.40,  rgba(242, 230, 213, 0.9)),
-      color-stop(0.70,  rgba(0, 0, 0, 0)));
-}
-#logo
-{ 
-  position:absolute;
-  width: 25%;
-  top:7%;
-  left: 10%;
-	z-index: 1;
-}
-
-    </style>
+  </style>
 
 </head>
 
 <body>
-<div>
-	<header style="">
-		<nav class="navbar navbar-default tembus">
-		  <div class="container">
+
+  <div class="container-fluid">
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span> 
 		      </button>
-		      <a class="navbar-brand" href="#">
-          
-          </a>
+		      <!-- <a class="navbar-brand" href="#">
+            
+          </a> -->
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
-		      <ul class="nav navbar-nav navbar-right">
+		      <ul class="nav navbar-nav navbar-left">
 		        <li><a href="#" class="hvrcenter">Home</a></li>
-		        <li><a href="#" class="hvrcenter">About</a></li>
-		        <li><a href="#" class="hvrcenter">TimeLine</a></li>
+		        <li><a href="#" class="hvrcenter">What we offer</a></li>
+		        <li><a href="#" class="hvrcenter">For whom</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" class="hvrcenter">Facts and Links</a></li>
+            <li><a href="#" class="hvrcenter">About</a></li>
+            <li><a href="#" class="hvrcenter">Contact</a></li>
 		      </ul>
 		    </div>
 		  </div>
 		</nav>
-	</header>
-</div>
-<img id="logo" src="Pics/39-1.png" class="img-responsive">
-<div class="row">
-  <div class="containers">
-  <img class='photo'  src="Pics/athens_03.jpg" alt="" />
-  <img class='photo'  src="Pics/athens_03.jpg" alt="" />
-  <img class='photo'  src="Pics/athens_03.jpg" alt="" />
-  <img class='photo'  src="Pics/athens_03.jpg" alt="" />
-   <div class="overlay"></div>
- 
-</div>
-</div>
-  
-  
+
+    <div class="row">
+      <img id="logo" src="Pics/39-1.png" class="img-responsive">
+      <img class="img-responsive photo"  src="Pics/athens_03.jpg" alt="" />
+      <img class="img-responsive photo"  src="Pics/athens_03.jpg" alt="" />
+      <img class="img-responsive photo"  src="Pics/athens_03.jpg" alt="" />
+      <img class="img-responsive photo"  src="Pics/athens_03.jpg" alt="" />
+      <div class="overlay" style="height: 618px"></div>
+
+    </div>  
+
+  </div>
 </body>
 </html>
