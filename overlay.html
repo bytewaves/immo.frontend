@@ -12,10 +12,6 @@
   
   <style type="text/css">
     
-    /*.navbar-default .navbar-nav > li > a{
-    	color: black ;
-    }*/
-
     .navbar-default .navbar-nav > .active > a,
     .navbar-default .navbar-nav > .active > a:hover,
     .navbar-default .navbar-nav > .active > a:focus {
@@ -109,14 +105,9 @@
     	z-index: 1;
     }
 
-    #moto
-    {
-      position: absolute;
-      top:20%;
-      left: 5%;
-      z-index: 2;
+    .front-cover {
+      @include make-row();
     }
-
 
     /*body { padding-bottom: 50px; }*/
 
@@ -155,15 +146,15 @@
 		  </div>
 		</nav>
 
-    <div class="row">
+    <div class="front-cover">
       <img id="logo" src="Pics/39-1.png" class="img-responsive">
       <img class="img-responsive photo"  src="Pics/athens_03.jpg" alt="" />
       <img class="img-responsive photo"  src="Pics/athens_03.jpg" alt="" />
       <img class="img-responsive photo"  src="Pics/athens_03.jpg" alt="" />
       <img class="img-responsive photo"  src="Pics/athens_03.jpg" alt="" />
-      <div class="overlay" style="height: 618px"></div>
+      <!-- <div class="overlay" style="height: 618px"></div> -->
 
-    </div>  
+    </div>
 
   </div>
 </body>
