@@ -1,6 +1,7 @@
-.navbar-default{
+.navbar-default {
   background-color: #ADABAB !important; 
 }
+
 .nav-link {
   display: inline-block;
   vertical-align: middle;
@@ -9,6 +10,7 @@
   box-shadow: 0 0 1px transparent;
   
 }
+
 .nav-link:before {
   content: "";
   position: absolute;
@@ -24,6 +26,7 @@
   transition-duration: 0.3s;
   
 }
+
 .nav-link:hover:before, .nav-link:focus:before, .nav-link:active:before {
   left: 0;
   right: 0;
