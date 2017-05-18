@@ -1,75 +1,51 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8">
 		<meta name="robots" content="noindex">
 
 		<title>Boostrap 4 navbar </title>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-<style type="text/css">
+    
+    <!-- Include styling for the navbar -->
+    <link rel="stylesheet" type="text/css" href="navbar.css">
 
 
-.navbar-default{
-	background-color: #ADABAB !important; 
-}
-.nav-link {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  
-}
-.nav-link:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  background: #000000;
-  height: 2px;
-  -webkit-transition-property: left, right;
-  transition-property: left, right;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  
-}
-.nav-link:hover:before, .nav-link:focus:before, .nav-link:active:before {
-  left: 0;
-  right: 0;
-}
-</style>
-<!-- Navbar Section -->
-<header>
-	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">SSSS</a>
+    <!-- Navbar Section -->
+    <header>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">What we offer</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">For Whom</a>
-      </li>
-    </ul>
-	<ul class="nav navbar-nav navbar-right">
+    	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">SSSS</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">What we offer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">For Whom</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
             <li><a href="#" class="nav-link">Facts and Links</a></li>
             <li><a href="#" class="nav-link">About</a></li>
             <li><a href="#" class="nav-link">Contact</a></li>
-		      </ul>
-  </div>
-</nav>
-</header>
+  		    </ul>
+        </div>
+      </nav>
+    </header>
+
+  </head>
+</html>
 
