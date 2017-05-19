@@ -6,9 +6,8 @@
 .logo {
   position: absolute;
   z-index: 1;
-  /*height: 100%; */
   margin-left: 3%;
-  background-color: grey;
+  /*background-color: grey;*/
 }
 
 .with-gradient {
@@ -22,8 +21,8 @@
   position: absolute;
   margin-top: 29%;
   left: 6%;
-  padding: 8px 8px 8px 8px;
-  background-color: grey;
+  padding: 6px 6px 6px 6px;
+  /*background-color: grey;*/
   z-index: 1;
 }
 
@@ -39,10 +38,9 @@
 }
 
 .cover {
-  background-color: blue;
+  background-color: white;
 }
 
 .content {
-  position: relative;
-  background-color: red;
+  background-color: gray;
 }
