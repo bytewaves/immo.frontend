@@ -1,8 +1,8 @@
-.with-fade-io {
-  position: absolute;
+/*.with-fade-io {
+  position: absolute;   This here creates the problem 
   animation: round 12s infinite;
   opacity: 0;
-}
+}*/
 
 @keyframes round {
   30% {
