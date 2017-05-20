@@ -61,6 +61,9 @@
 
 	<!-- Body -->
 	<body>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 		<div class="container-fluid">
 			<div class="row cover">
 
@@ -72,13 +75,15 @@
 			        <h3 class="moto-txt">I am the worst at my best and that's what I like about me best. Dynato auto to commit. Dokimase na kaneis resize to parathyro.</h3>
 		        </div>
 
-				<div class="cover-img col-md-12 hidden-xs-down">
-		        	<img class="img-fluid with-gradient with-fade-io"  src="Pics/athens_03.jpg" id="cover-img-01" />
+				<div class="hidden-xs-down" id="wrap">
+		        	<img class="bgfade with-gradient" src="Pics/athens_03.jpg">
+					<img class="bgfade with-gradient" src="Pics/athens_03.jpg">
+					<img class="bgfade with-gradient" src="Pics/athens_03.jpg">
 		        </div>
 
 	    	</div>
 
-
+			<!-- Start of content -->
 	    	<div class="row content my-4">
 			  <div class="col-sm-6 col-md-4">
 			    <div class="thumbnail">
@@ -91,8 +96,25 @@
 			    </div>
 			  </div>
 			</div>
+			<!-- End of content -->
 		        
 		</div>
+
+		<script type="text/javascript">
+			$(window).load(function(){
+			$('img.bgfade').hide();
+			var dg_H = $(window).height();
+			var dg_W = $(window).width();
+			$('#wrap').css({'height':dg_H,'width':dg_W});
+			function anim() {
+			    $("#wrap img.bgfade").first().appendTo('#wrap').fadeOut(1500);
+			    $("#wrap img").first().fadeIn(1500);
+			    setTimeout(anim, 3000);
+			}
+			anim();})
+			$(window).resize(function(){window.location.href=window.location.href})
+		</script>
+
 	</body>
 
 </html>

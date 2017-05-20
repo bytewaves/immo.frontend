@@ -1,29 +1,11 @@
-/*.with-fade-io {
-  position: absolute;   This here creates the problem 
-  animation: round 12s infinite;
-  opacity: 0;
-}*/
-
-@keyframes round {
-  30% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+#wrap {
+  position: fixed;
+  background-color: blue;
+  z-index: -1; 
 }
-img:nth-child(1) {
-  animation-delay: 12s;
-}
-
-img:nth-child(2) {
-  animation-delay: 8s;
-}
-
-img:nth-child(3) {
-  animation-delay: 4s;
-}
-
-img:nth-child(4) {
-  animation-delay: 0s;
+#wrap img.bgfade {
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: -1;
 }
