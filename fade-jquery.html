@@ -2,14 +2,34 @@
 
 	<head>
 <style type="text/css">
-
+#wrap{
+	position:fixed;; 
+	z-index:-1; 
+	top:0; 
+	left:0; 
+	background-color:black
+}
+#wrap img.bgfade{
+	position:absolute;
+	top:100px;
+	display:none;
+	width:100%;
+	height:80%;
+	z-index:-1
+	
 </style>
 </head>
 <body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/View_of_the_Acropolis_Athens_%28pixinn.net%29.jpg/400px-View_of_the_Acropolis_Athens_%28pixinn.net%29.jpg" id="myImage">
+	<div id="wrap">
+<img class="bgfade" src="https://conferences.cwa.gr/eann2017/wp-content/uploads/2016/11/athens.jpg">
+<img class="bgfade" src="http://www.cpathens.com/gallery_category_big_image/c79c-pool-at-night.jpg">
+<img class="bgfade" src="https://conferences.cwa.gr/eann2017/wp-content/uploads/2016/11/athens.jpg">
+</div>
+	
+	
 
 
 
@@ -18,20 +38,18 @@
 		 
 
 
-		function fadeIn()
-		{
-		   $(this).fadeIn( fadeOut );
-		}
-
-		function fadeOut()
-		{
-		   $(this).fadeOut( fadeIn );
-		}
-
-		fadeIn.call($("#myImage"));
-
-		$("#myImage").fadeOut(2000);
-		
+		$(window).load(function(){
+$('img.bgfade').hide();
+var dg_H = $(window).height();
+var dg_W = $(window).width();
+$('#wrap').css({'height':dg_H,'width':dg_W});
+function anim() {
+    $("#wrap img.bgfade").first().appendTo('#wrap').fadeOut(1500);
+    $("#wrap img").first().fadeIn(1500);
+    setTimeout(anim, 3000);
+}
+anim();})
+$(window).resize(function(){window.location.href=window.location.href})
 		
 		</script>
 			
