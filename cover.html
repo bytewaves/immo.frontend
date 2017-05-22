@@ -54,6 +54,22 @@
     		</nav>
 	    </header>
 
+	    <script type="text/javascript">
+	    	$(document).ready(function () {
+				var img_fluid_height = $('#cover-img-01').height();
+			  	$('#coverSkipper').css({
+			      'height': img_fluid_height + 10
+  				});
+			});
+
+			$(window).resize(function () {
+			  var img_fluid_height = $('#cover-img-01').height();
+			  	$('#coverSkipper').css({
+			      'height': img_fluid_height +10
+  				});
+			});
+	    </script>
+
 	</head>
 
 
@@ -76,9 +92,19 @@
 		        	<img class="img-fluid with-gradient with-fade-io"  src="Pics/athens_03.jpg" id="cover-img-04" />
 		        </div>
 
+		        <div id="coverSkipper"; style="position: relative; width: 100%">
+			        <!-- space-keeping div, matching the img-fluid dimensions on resize -->
+		        </div>
+
+		        <div>
+		        	<h3>Is this text showing properly under the cover?</h3>
+		        </div>
+
 	    	</div>
 		        
 		</div>
+
+		
 	</body>
 
 </html>
