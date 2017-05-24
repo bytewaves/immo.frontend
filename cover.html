@@ -71,6 +71,23 @@
 			      'height': img_fluid_height
   				});
 			});
+			//List of quotes
+var quotes = ["I am the worst at my best and that's what I like about me best. Dynato auto to commit. Dokimase na kaneis resize to parathyro.", "teleiwne maliaka me tin douleia", "gia na", "eimaste", "online epitelous"];
+
+//Counter for loop
+var m = 0;
+
+//Call the changeText() function every 5000 miliseconds
+setInterval(changeText, 5000);
+
+//Function to change div to a quote and change counter.
+function changeText(){
+    document.getElementById("change").innerHTML=(quotes[m] + '<p style="text-align: right">' + '</p>');
+    if(m == 4)
+        m = 0;
+    else
+        m++;
+}
 	    </script>
 
 	</head>
@@ -85,8 +102,8 @@
 		        </div>
 
 		        <div class="moto col-lg-3 col-md-5 hidden-sm-down">
-			        <h3 class="moto-txt">I am the worst at my best and that's what I like about me best. Dynato auto to commit. Dokimase na kaneis resize to parathyro.</h3>
-		        </div>
+						<div id="change"> </div>
+					</div>
 
 		        <div class="cover-img">
 		        	<img class="img-fluid with-gradient with-fade-io"  src="Pics/athens_03.jpg" id="cover-img-01" />
