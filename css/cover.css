@@ -1,0 +1,35 @@
+.cover-img {
+  z-index: 0;
+  width: 100%;
+}
+
+.logo {
+    z-index: 1;
+    padding: 0 0 0 6%;
+}
+
+.logo, .cover-img {
+    position: absolute;
+}
+
+.with-gradient {
+  -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, 
+    color-stop(0.00,  rgba(0, 0, 0, 0)),
+    color-stop(0.35,  rgba(0, 0, 0, 0.1)),
+    color-stop(0.55,  rgba(0, 0, 0, 1)));
+}
+
+.moto {
+  position: absolute;
+  margin-top: 29%;
+  margin-left: 6%;
+  padding: 8px 0 0 8px;
+  /*background-color: white;*/
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.moto-txt {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 22px;
+}
