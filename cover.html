@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+
 		<meta charset="UTF-8">
 		<meta name="robots" content="noindex">
 
@@ -15,44 +16,62 @@
 	    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
 	  
 	    <!-- Include styling for the Navbar -->
-	    <link rel="stylesheet" type="text/css" href="navbar.css">
+	    <link rel="stylesheet" type="text/css" href="css/navbar.css">
 
 	  	<!-- Include styling for the Cover -->
-		<link rel="stylesheet" type="text/css" href="cover.css">
+		<link rel="stylesheet" type="text/css" href="css/cover.css">
 
 		<!-- Include styling for the fade-in/out effect -->
-		<link rel="stylesheet" type="text/css" href="fade-io.css">
+		<link rel="stylesheet" type="text/css" href="css/fade-io.css">
+
+		<!-- Include styling for the footer -->
+		<link rel="stylesheet" type="text/css" href="css/footer.css">
+
+		<!-- Include styling for the buttons -->
+		<link rel="stylesheet" type="text/css" href="css/buttons.css">
+
 
 		<!-- Navbar Section -->
 	    <header>
 
-			<nav class="navbar navbar-toggleable-md navbar-light">
+			<nav class="navbar navbar-toggleable-sm navbar-light">
 
 		        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		          <span class="navbar-toggler-icon"></span>
 		        </button>
-		        <a class="navbar-brand" href="#">Brand-Name</a>
+		        <a class="navbar-brand hidden-md-up" href="#">Brand-Name</a>
 
 		        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		          <ul class="navbar-nav mr-auto">
-		            <li class="nav-item active">
-		              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-		            </li>
-		            <li class="nav-item">
-		              <a class="nav-link" href="#">What we offer</a>
-		            </li>
-		            <li class="nav-item">
-		              <a class="nav-link" href="#">For Whom</a>
-		            </li>
+		            <!--  -->
 		          </ul>
 		          <ul class="nav navbar-nav navbar-right">
-		            <li><a href="#" class="nav-link">Facts and Links</a></li>
-		            <li><a href="#" class="nav-link">About</a></li>
-		            <li><a href="#" class="nav-link">Contact</a></li>
+			        <li><a href="#" class="nav-link">what we offer</a></li>
+			        <li><a href="#" class="nav-link">for whom</a></li>
+		            <li><a href="#" class="nav-link">facts</a></li>
+		            <li><a href="#" class="nav-link">links</a></li>
+		            <li><a href="#" class="nav-link">about</a></li>
+		            <li><a href="#" class="nav-link">contact</a></li>
 		  		</ul>
 		        </div>
     		</nav>
 	    </header>
+
+	    <script type="text/javascript">
+	    	$(document).ready(function () {
+				var img_fluid_height = $('#cover-img-01').height();
+			  	$('#coverSkipper').css({
+			      'height': img_fluid_height
+  				});
+			});
+
+			$(window).resize(function () {
+			  var img_fluid_height = $('#cover-img-01').height();
+			  	$('#coverSkipper').css({
+			      'height': img_fluid_height
+  				});
+			});
+	    </script>
 
 	</head>
 
@@ -61,7 +80,7 @@
 	<body>
 		<div class="container-fluid">
 			<div class="row">
-		        <div class="logo col-sm-4 col-xs-12">
+		        <div class="logo col-sm-4 col-xs-12 hidden-sm-down">
 		        	<img class="img-fluid" src="Pics/39-1.png" id="logo" />
 		        </div>
 
@@ -69,16 +88,136 @@
 			        <h3 class="moto-txt">I am the worst at my best and that's what I like about me best. Dynato auto to commit. Dokimase na kaneis resize to parathyro.</h3>
 		        </div>
 
-		        <div class="cover-img col-md-12 hidden-xs-down">
+		        <div class="cover-img">
 		        	<img class="img-fluid with-gradient with-fade-io"  src="Pics/athens_03.jpg" id="cover-img-01" />
 		        	<img class="img-fluid with-gradient with-fade-io"  src="Pics/athens_03.jpg" id="cover-img-02" />
 		        	<img class="img-fluid with-gradient with-fade-io"  src="Pics/athens_03.jpg" id="cover-img-03" />
 		        	<img class="img-fluid with-gradient with-fade-io"  src="Pics/athens_03.jpg" id="cover-img-04" />
 		        </div>
 
-	    	</div>
-		        
+		        <div id="coverSkipper"; style="position: relative">
+		        	<!-- placeholder div, matching the img-fluid dimensions on resize -->
+		        </div>
+			</div>
+
+
+
+	        <div class="row col-md-12 my-5 justify-content-md-center">
+		        <div class="col-md-5 py-4">
+				    <h4 class="card-title">Day</h4>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn blue">Go to Daytrips</a>
+			    </div>
+
+			    <div class="col-md-5 py-4">
+				    <h4 class="card-title">Night</h4>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn green">Go to Restaurants</a>
+			    </div>
+    		</div>
+
+    		<hr>
+
+    		<div class="row col-md-12 my-5 justify-content-md-center">
+		        <div class="col-md-5 py-4">
+				    <h4 class="card-title">Day</h4>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn orange">Go to Info</a>
+			    </div>
+
+			    <div class="col-md-5 py-4">
+				    <h4 class="card-title">Night</h4>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn purple">Go to offer</a>
+			    </div>
+    		</div>
+
 		</div>
+
+
+
+		<footer>
+		    <div class="footer" id="footer">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+		                    <h3> Lorem Ipsum </h3>
+		                    <ul>
+		                        <li> <a href="#"> blalva </a> </li>
+		                        <li> <a href="#"> Lorem Ipsum </a> </li>
+		                        <li> <a href="#"> Lorem Ipsum </a> </li>
+		                        <li> <a href="#"> Lorem Ipsum </a> </li>
+		                    </ul>
+		                </div>
+		                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+		                    <h3> Lorem Ipsum </h3>
+		                    <ul>
+		                        <li> <a href="#"> bla vlall vla </a> </li>
+		                        <li> <a href="#"> Lorem Ipsum </a> </li>
+		                        <li> <a href="#"> Lorem Ipsum </a> </li>
+		                        <li> <a href="#"> Lorem Ipsum </a> </li>
+		                    </ul>
+		                </div>
+		                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+		                    <h3> Lorem Ipsum </h3>
+		                    <ul>
+		                        <li> <a href="#"> Lorem Ipsum </a> </li>
+		                        <li> <a href="#"> Lorem Ipsum </a> </li>
+		                        <li> <a href="#"> Lorem Ipsum </a> </li>
+		                        <li> <a href="#"> Lorem Ipsum </a> </li>
+		                    </ul>
+		                </div>
+		                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+		                    <h3> Lorem Ipsum </h3>
+		                    <ul>
+		                        <li> <a href="#"> Lorem Ipsum </a> </li>
+		                        <li> <a href="#"> Lorem Ipsum </a> </li>
+		                        <li> <a href="#"> Lorem Ipsum </a> </li>
+		                        <li> <a href="#"> Lorem Ipsum </a> </li>
+		                    </ul>
+		                </div>
+		                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
+		                    <h3> Lorem Ipsum </h3>
+		                    <ul>
+		                        <li>
+		                            <div class="input-append newsletter-box text-center">
+		                                <input type="text" class="full text-center" placeholder="Email ">
+		                                <button class="btn  bg-gray" type="button"> Lorem ipsum <i class="fa fa-long-arrow-right"> </i> </button>
+		                            </div>
+		                        </li>
+		                    </ul>
+		                    <ul class="social">
+		                        <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+		                        <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+		                        <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+		                        <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
+		                        <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+		                    </ul>
+		                </div>
+		            </div>
+		            <!--/.row--> 
+		        </div>
+		        <!--/.container--> 
+		    </div>
+		    <!--/.footer-->
+		    
+		    <div class="footer-bottom">
+		        <div class="container">
+		            <p class="pull-left"> Powered by ..... 2017</p>
+		            <div class="pull-right">
+		                <ul class="nav nav-pills payments">
+		                    <li><i class="fa fa-cc-visa"></i></li>
+		                    <li><i class="fa fa-cc-mastercard"></i></li>
+		                    <li><i class="fa fa-cc-amex"></i></li>
+		                    <li><i class="fa fa-cc-paypal"></i></li>
+		                </ul> 
+		            </div>
+		        </div>
+		    </div>
+		    <!--/.footer-bottom--> 
+
+		</footer>
+		
 	</body>
 
 </html>
