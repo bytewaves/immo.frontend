@@ -5,7 +5,8 @@
 
 .logo {
     z-index: 1;
-    padding: 0 0 0 6%;
+    top: -40px;
+    padding: 0 0 0 3%;
 }
 
 .logo, .cover-img {
