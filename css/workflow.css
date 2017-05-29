@@ -1,7 +1,12 @@
 .section-heading {
-  height: 300px;
-  text-align: center; 
-  vertical-align: middle; 
+  padding: 100px 20px 100px 20px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 32px;
+  line-height: 42px;
 }
 
 .step-overlay {

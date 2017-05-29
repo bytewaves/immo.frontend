@@ -12,7 +12,7 @@
   z-index: -1;
   left: 50%;
   right: 50%;
-  bottom: -8px;
+  bottom: 0px;
   background: #f9b53e;
   height: 2px;
   -webkit-transition-property: left, right;
