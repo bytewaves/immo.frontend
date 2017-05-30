@@ -1,0 +1,33 @@
+/* Dark yellow (logo):  #f9a33f | Complementary: #3f95f9 */
+/* Light yellow (logo): #f4d771 | Complementary: #718ef4 */
+/* Sunset: 		  		#fad6a5 | Complementary: #a5c9fa */
+/* Sunset orange: 		#fd5e53 | Complementary: #53f2fd */
+
+.summary-item {
+	border-radius: 8px;
+}
+
+
+.summary-item-ly {
+	-moz-box-shadow: 1px 1px 3px 2px #f4d771; 
+	-webkit-box-shadow: 1px 1px 3px 2px #f4d771; 
+	box-shadow: 1px 1px 3px 2px #f4d771;
+}
+
+.summary-item-dy {
+	-moz-box-shadow: 1px 1px 3px 2px #f9a33f; 
+	-webkit-box-shadow: 1px 1px 3px 2px #f9a33f; 
+	box-shadow: 1px 1px 3px 2px #f9a33f;
+}
+
+.summary-item-sunset {
+	-moz-box-shadow: 1px 1px 3px 2px #fad6a5; 
+	-webkit-box-shadow: 1px 1px 3px 2px #fad6a5; 
+	box-shadow: 1px 1px 3px 2px #fad6a5; 
+}
+
+.summary-item-sunset-orange {
+	-moz-box-shadow: 1px 1px 3px 2px #fd5e53; 
+	-webkit-box-shadow: 1px 1px 3px 2px #fd5e53; 
+	box-shadow: 1px 1px 3px 2px #fd5e53; 
+}
