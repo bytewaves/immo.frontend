@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style type="text/css">
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {
+  background-image: url(http://www.pr-siahami.gr/images/halftone.png);
+  background-repeat: repeat;
+  
+}
+
+.container {
+  margin: 30px auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.row {
+  background:#474646;
+  color: white;
+  margin: 5px;
+}
+
+.col-md-3,
+.col-md-9 {
+  text-align: left;
+  height: 250px;
+}
+
+.col-md-9 .header {
+  padding: 10px;
+  
+}
+
+.col-md-9 .header p {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 9px;
+  border-radius: 5px;
+  font-size: 23px;
+  float: right;
+}
+
+.col-md-9 .header h3 {
+  display: inline-block;
+}
+
+.photo {
+  background: #2F2F2F;
+  padding: 0px;
+  overflow: hidden;
+  height: 250px;
+}
+
+.photo img {
+  min-width: 100%;
+  float: left;
+}
+
+.photo img:nth-child(2) {
+  border-left: 10px solid #2F2F2F;
+  position: absolute;
+  left: 97%;
+  max-height: 100%;
+  -webkit-transition: 1s;
+  /* Safari */
+  transition: 1s;
+  /*   box-shadow: 0px 0px 50px 20px rgba(0,0,0,0.5); */
+}
+
+.row:hover .photo img:nth-child(2) {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+  left: 0%;
+  -webkit-transition: 0.8s;
+  /* Safari */
+  transition: 0.8s;
+}
+
+.type{
+  padding:10px;
+  background:rgba(0,0,0,0.1);
+  margin:5px;
+  border-radius:5px;
+  display:inline-block;
+}
+.tag{
+  cursor:pointer;
+  -webkit-transition: 0.2s;
+  /* Safari */
+  transition: 0.2s;
+}
+.tag .fa{
+  padding:0px 5px;
+}
+.tag:hover{
+  background:white;
+  color:rgba(0,0,0,0.7);
+  -webkit-transition: 0.2s;
+  /* Safari */
+  transition: 0.2s;
+}
+.tag:hover .fa{
+  color:rgba(0,0,0,0.7);
+  -webkit-transition: 0.2s;
+  /* Safari */
+  transition: 0.2s;
+}
+.main-info{
+  padding:7px;
+}
+.row{
+  margin-top:10px;
+  margin-bottom:10px;
+  
+}
+.left-side.tags{
+  float:left;
+  width:80%;
+}
+.right-side{
+  float:right;
+  width:20%;
+  padding:10px;
+  border-left:1px solid rgba(0,0,0,0.1);
+  
+}
+.desc{
+  margin:5px;
+  color:rgba(255,255,255,0.8);
+  
+}
+
+
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+
+<div class="container">
+  <div class="row">
+    <div class="photo col-md-3">
+      <img src="http://www.pr-siahami.gr/images/stories/virtuemart/product/resized/9665449.jpg_0x300.jpg"></img>
+      <img src="http://www.pr-siahami.gr/images/stories/virtuemart/product/9665452.jpg.jpg"></img>
+    </div>
+    <div class="col-md-9">
+      <div class="header">
+        <h3>Κατάστημα 350 τ.μ. Μαρκόπουλο</h3>
+        <p>1,200€</p>
+      </div>
+      <div class="main-info">
+
+        <div class="type tag">
+          <i class="fa fa-circle" aria-hidden="true"></i>Επαγγελματικό
+        </div>
+        <div class="type tag">
+          <i class="fa fa-circle" aria-hidden="true"></i> του 1999
+        </div>
+        <div class="type tag">
+          <i class="fa fa-circle" aria-hidden="true"></i>1ος όροφος
+        </div>
+        <div class="type tag">
+          <i class="fa fa-circle" aria-hidden="true"></i>350 μ<sup>2</sup>
+        </div>
+        <div class="type tag">
+          <i class="fa fa-circle" aria-hidden="true"></i>2 υπνοδωμάτια
+        </div>
+        <div class="desc">Μαρκόπουλο πρώην Millenium Bank, 50 μ. από την πλατεία...</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="photo col-md-3">
+      <img src="http://www.pr-siahami.gr/images/stories/virtuemart/product/resized/39972209.jpg_0x300.jpg"></img>
+      <img src="http://www.pr-siahami.gr/images/stories/virtuemart/product/39972219.jpg.jpg"></img>
+    </div>
+    <div class="col-md-9">
+      <div class="header">
+        <h3>Κατάστημα 260 τ.μ. Απελόκηποι</h3>
+        <p>7,000€</p>
+      </div>
+      <div class="main-info">
+        <div class="type tag">
+          <i class="fa fa-circle" aria-hidden="true"></i>Επαγγελματικό
+        </div>
+        <div class="type tag">
+          <i class="fa fa-circle" aria-hidden="true"></i> του 1985
+        </div>
+        <div class="type tag">
+          <i class="fa fa-circle" aria-hidden="true"></i>ισόγειο
+        </div>
+        <div class="type tag">
+          <i class="fa fa-circle" aria-hidden="true"></i>260 μ<sup>2</sup>
+        </div>
+        <div class="type tag">
+          <i class="fa fa-circle" aria-hidden="true"></i>2 δωμάτια
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="photo col-md-3">
+      <img src="http://www.pr-siahami.gr/images/stories/virtuemart/product/resized/49565443.jpg_0x300.jpg"></img>
+      <img src="http://www.pr-siahami.gr/images/stories/virtuemart/product/40992539.jpg.jpg"></img>
+
+    </div>
+    <div class="col-md-9">
+      <div class="header">
+        <h3>Αίθουσα 400 τ.μ. Μαρκόπουλο</h3>
+        <p>5,000€</p>
+      </div>
+      <div class="main-info">
+        <div class="type tag">
+          <i class="fa fa-circle" aria-hidden="true"></i>Γή
+        </div>
+        <div class="type tag">
+          <i class="fa fa-circle" aria-hidden="true"></i>του 2002
+        </div>
+        <div class="type tag">
+          <i class="fa fa-circle" aria-hidden="true"></i>ισόγειο
+        </div>
+        <div class="type tag">
+          <i class="fa fa-circle" aria-hidden="true"></i>400 μ<sup>2</sup>
+        </div>
+        <div class="type tag">
+          <i class="fa fa-circle" aria-hidden="true"></i>5 δωμάτια
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+	
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+
